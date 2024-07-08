@@ -1,0 +1,88 @@
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+    <a class="navbar-brand px-4" href="#" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <!-- <li class="nav-item dropdown" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)">
+          <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">Instructions</a></li>
+            <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+            <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+        </li>
+      
+        <li class="nav-item" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)" routerLinkActive="active-link" role="button">
+          <a class="nav-link"  routerLink="/stories"   style="color:black;">Stories</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen" >
+            <li><a href="#" class="dropdown-item">Share Your story</a></li>
+            <li><a routerLink="/update" class="dropdown-item">EDIT YOUR STORY</a></li>
+            <li><a href="#" class="dropdown-item">Delete your story</a></li>
+            <li><a href="#" class="dropdown-item">Read Your Story</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/feedback"  routerLinkActive="active-link" style="color:black;">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="#"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-logo dropstart" style="color:black;">
+      <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+     data-bs-toggle="dropdown">USER</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a href="#" class="dropdown-item">SIGN UP</a></li>
+        <li><a href="login" class="dropdown-item">LOGIN</a></li>
+        <li><a href="#" class="dropdown-item">YOUR PROFILE</a></li>
+        <li><a href="#" class="dropdown-item">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+<div class="form-group">
+    <br>
+    <form #r="ngForm">
+        <table align="center" cellpadding="10">
+            <tr>
+                <td><p>Title</p></td>
+                <td><input type="text" id="name" name="title" id="a" placeholder="Enter your Title" [(ngModel)]="User.title" >
+                </td>
+            </tr>
+            <tr>
+                <td><p>Name</p></td>
+                <td><input type="text" id="name" name="name" id="a" placeholder="Enter your Name" [(ngModel)]="User.name">
+                </td>
+            </tr>
+            <tr>
+                <td><p>email</p></td>
+                <td><input type="email" id="name" name="email" id="a"  placeholder="Enter your Email" [(ngModel)]="User.email">
+                </td>
+            </tr>
+            <tr>
+              <td><p>your story</p></td>
+              <td><textarea name="story" placeholder="Enter your Story" rows=10 cols=100 id="name1" [(ngModel)]="User.story"></textarea>
+              </td>
+          </tr>
+            <tr>
+
+            <td align="center" colspan="1"><button type="submit" class="btn btn-primary" (click)="Update()">Update</button></td>
+            <td align="center" colspan="1"><button type="submit" class="btn btn-primary" (click)="Delete()">Delete</button></td>
+                
+            </tr>
+          
+           
+        </table>
+        </form>
+</div>

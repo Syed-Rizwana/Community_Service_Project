@@ -1,0 +1,91 @@
+
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+    <a class="navbar-brand px-4" href="#" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <!-- <li class="nav-item dropdown" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)">
+          <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">Instructions</a></li>
+            <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+            <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+        </li>
+      
+       
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/stories"  routerLinkActive="active-link" style="color:black;">Stories</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link"  class="nav-link dropdown-toggle bg-pink" style="color:black;" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false"  routerLink="/ins" routerLinkActive="active-link"  style="color:black;">Our Inspirations</a>
+          <!-- <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a routerLink="/Officers" class="dropdown-item">Women Officers</a></li>
+            <li><a routerLink="/Victims" class="dropdown-item">Women Victims</a></li>
+          </ul> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/feedback"  routerLinkActive="active-link" style="color:black;">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="#"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-logo dropstart" style="color:black;">
+      <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+     data-bs-toggle="dropdown">{{username}}</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a routerLink="/signup" class="dropdown-item">SIGN UP</a></li>
+        <li><a routerLink="/login" class="dropdown-item">LOGIN</a></li>
+        <li><a routerLink="#" class="dropdown-item">YOUR PROFILE</a></li>
+        <li><a routerLink="/display" class="dropdown-item">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+<br/>
+<br/>
+<body >  
+    <div class="acts">
+    <div class="mc">
+    <div class="container">
+    <div class="dv">
+    <img src="https://i1.wp.com/vidhi.org/wp-content/uploads/2020/06/Domestic-violence.jpg?fit=810%2C455&ssl=1" alt="Domesitic Violence">
+    <h1><a routerLink='/dv' routerLinkActive="active">Domestic Violence</a></h1>
+    </div>
+    <div class="dowry">
+      <img src="https://th.bing.com/th/id/OIP.uxlYUlaL0SV2cpciRExw_QHaD1?pid=ImgDet&rs=1" alt="Dowry"> 
+      <h1><a routerLink='/dowry' routerLinkActive="active">Dowry Demanding</a></h1> 
+    </div>  
+    <div class="asking">
+      <h2>Do you know more acts?</h2> 
+      <h2><a routerLink='/form'>You can share by clicking this link</a></h2>
+      <h2><a  routerLink='/table'>Click Here for the table</a></h2>
+    </div>
+    </div> 
+    <div class="container2">
+    <div class="acid">
+      <img src="https://s3-ap-south-1.amazonaws.com/adda247jobs-wp-assets-adda247/articles/wp-content/uploads/2022/12/17220326/Law-On-Acid-Attacks-1.jpg" alt="Acid">
+      <h1><a routerLink='/acid' routerLinkActive="active">Acid Attack</a></h1>
+    </div>
+    <div class="sh">
+      <img src="https://4.bp.blogspot.com/-Vk3p1l7o230/XaHI12Zz5CI/AAAAAAAABDQ/GgSejQj0uWwJVCFjYb00LhsH3B7GgNDSwCLcBGAsYHQ/s1600/Sexual%2BHarassment%2BAssault%2BSilhouette%2B%25282%2529.jpg" alt="Sexual harassment"> 
+      <h1><a routerLink='/sh' routerLinkActive="active" >Sexual Harassment</a></h1>
+    </div>
+  </div> 
+  </div>
+  </div>
+  </body> 
+  

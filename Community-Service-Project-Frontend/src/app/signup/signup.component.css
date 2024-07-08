@@ -1,0 +1,73 @@
+.container {
+    background-image: url('https://i.pinimg.com/originals/cb/b6/47/cbb6476c6ac31835f0b42accb9fb209f.jpg');
+    background-size: cover;
+    background-position: center;
+    /* min-height: 100vh; */
+    max-height: 5000px;
+    max-width: 2000px;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+  }
+  button+p a {
+    text-decoration: none;
+    color: #7227D5;
+    font-weight: 500;
+}
+
+  .signup-form {
+    background-color: rgba(184, 177, 184, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group input[type="password"],
+  .form-group input[type="tel"],
+  .form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  .form-group .error-message {
+    color: red;
+    margin-top: 5px;
+    font-size: 14px;
+  }
+
+  .form-group .error-message::before {
+    content: "⚠ ";
+    display: inline-block;
+  }
+
+  .form-group.error input {
+    border-color: red;
+  }
+
+  .submit-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }

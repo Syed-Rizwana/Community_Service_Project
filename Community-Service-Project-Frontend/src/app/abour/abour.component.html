@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="WomenAgainstAbuse">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Women Against Abuse</title>
+ 
+</head>
+
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+  <a class="navbar-brand px-4" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav me-auto">
+      <!-- <li class="nav-item dropdown" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)">
+        <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+        <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+          <li><a href="#" class="dropdown-item">Instructions</a></li>
+          <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+          <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+          <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+        </ul>
+      </li> -->
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/stories"  routerLinkActive="active-link" style="color:black;">Stories</a>
+      </li>
+      <li class="nav-item dropdown" (mouseover)="openDropdown($event, 'ins')" (mouseleave)="closeDropdown($event, 'ins')">
+        <a class="nav-link"  class="nav-link dropdown-toggle bg-pink" style="color:black;" role="button"
+        data-bs-toggle="dropdown" aria-expanded="false"  routerLink="/ins" routerLinkActive="active-link"  style="color:black;">Our Inspirations</a>
+        <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+          <li><a routerLink="/Officers" class="dropdown-item">Women Officers</a></li>
+          <li><a routerLink="/Victims" class="dropdown-item">Women Victims</a></li>
+        </ul>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/feedback"  routerLinkActive="active-link" style="color:black;">Feedback</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link"  routerLink="/contactus"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+  <div class="profile-logo dropstart" style="color:black;">
+    <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+   data-bs-toggle="dropdown">{{username}}</button>
+    <ul class="dropdown-menu dropdown-menu-dark">
+      <li><a routerLink="/signup" class="dropdown-item">SIGN UP</a></li>
+      <li><a routerLink="/login" class="dropdown-item">LOGIN</a></li>
+      <li><a href="#" class="dropdown-item">YOUR PROFILE</a></li>
+      <li><a routerLink="/display" class="dropdown-item">LOG OUT</a></li>
+    </ul>
+  </div>
+</div>
+
+<body ng-controller="AboutController as ctrl">
+  <header>
+    <h1>About Us</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Our Mission</h2>
+      <p style="font-size: 25px;">Women Against Abuse is dedicated to providing support, empowerment, and resources to women who have experienced abuse. Our mission is to raise awareness about the issue of domestic violence and work towards creating a society free from violence and abuse.</p>
+    </section>
+
+    <section>
+      <h2>Our Approach</h2>
+      <p style="font-size: 20px;">We believe in a comprehensive approach to address the issue of abuse. Our organization focuses on:</p>
+      <ul style="font-size: 25px;">
+        <li>Providing safe spaces and shelters for women in need</li>
+        <li>Offering counseling and support services to survivors</li>
+        <li>Advocating for policy changes to protect victims and hold abusers accountable</li>
+        <li>Education and outreach programs to raise awareness and prevent abuse</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Survey Results</h2>
+      <p style="font-size: 25px;">As part of our ongoing commitment to understanding the needs and experiences of survivors, we regularly conduct surveys to gather valuable insights. Here are some key findings from our recent surveys:</p>
+    
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="assets/ccP1qaRF2gD3YVc5NOzxL-VmAhoQ6eLP_KdXAU5r0l0=_plaintext_638246597688042087.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/DrlvttKem6LqSGQ6c5Zt4pqZ1HWNWuKs05GacRDpqGA=_plaintext_638246597691590013.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/f72xp75BsLEdfTzLA1bpq2M0HT4F0JLpNxT0JleiRV8=_plaintext_638246760508493821.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+          <img src="assets\NRfE7sx8ObWtyMf2ZOeAzqFZOnXR5elTrEeskARe1JE=_plaintext_638246597683108164.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+          <img src="assets/_Jjr25GkeK7BoJ68kW9FEW2LLe7Fkh7I05QpzMe4Ig8=_plaintext_638246760492932308.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+          <img src="assets\pZLPF_FKFZBCDDrY1hvaSjA0Gy30YawJABi-WKhPo74=_plaintext_638246760500326779.jpg" alt="">
+        </div>
+        <div class="gallery-item">
+          <img src="assets\8trg1MT-VUZu0awjVV1Q29LH53nyKUpnaWuuiQkAq1o=_plaintext_638246597675750301.jpg" alt="">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section>
+    <h2>Meet Our Team</h2>
+    <p>Get to know the passionate individuals who make Women Against Abuse possible:</p>
+  
+    <div class="team-members">
+      <div class="team-member">
+        <h3>Ainavolu Manvitha</h3>
+        
+        <p>Email: manvithaainavolu@gmail.com</p>
+      </div>
+      <div class="team-member">
+        <h3>Jahanavi Sai Priya</h3>
+       
+        <p>Email: jahnavi@gmail.com</p>
+      </div>
+      <div class="team-member">
+        <h3>Syed Rizwana</h3>
+       
+        <p>Email: Rizwana@gmail.com</p>
+      </div><div class="team-member">
+        <h3>Bolla Varsha</h3>
+       
+        <p>Email: varsha@gmail.com</p>
+      </div><div class="team-member">
+        <h3>Keerthi</h3>
+       
+        <p>Email: keerthi@gmail.com</p>
+      </div>
+      <div class="team-member">
+        <h3>V.B.Harshitha</h3>
+       
+        <p>Email:Harshitha@gmail.com</p>
+      </div>
+      <div class="team-member">
+        <h3>K.Prathima</h3>
+      </div><div class="team-member">
+        <h3>Mubeena</h3>
+      </div>
+    </div>
+  </section>
+  
+  <footer>
+    <nav class="footer-nav">
+      <a href="/home">HOME</a>
+      <a href="/abour">ABOUT</a>
+      <a href="/acts">ACTS AND RULES</a>
+      <a href="/feedback">FEEDBACK</a>
+      <a href="/contactus">CONTACTUS</a>
+
+    </nav>
+    <div class="email" >
+      <p style="color:white">Contact us at: contact@womenagainstabuse.com</p>
+    </div>
+  </footer>
+</body>
+</html>

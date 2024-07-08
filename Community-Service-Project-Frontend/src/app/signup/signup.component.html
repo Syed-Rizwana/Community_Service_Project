@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="signup-form">
+      <h2>Sign Up</h2>
+      <form [formGroup]="signupForm">
+        <div class="form-group" [ngClass]="{ 'error': submitted && signupForm.controls['username'].errors?.['required'] }">
+          <label for="username">Username:</label>
+          <input type="text" formControlName="username" name="username" id="username" placeholder="Enter your username" [(ngModel)]="User.username">
+          <div *ngIf="submitted && signupForm.controls['username'].errors?.['required']" class="error-message">Username is required.</div>
+        </div>
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" formControlName="email"  name="email"id="email" placeholder="Enter your email" [(ngModel)]="User.email">
+          <div *ngIf="submitted && signupForm.controls['email'].errors?.['required']" class="error-message">Email is required.</div>
+          <div *ngIf="submitted && signupForm.controls['email'].errors?.['email']" class="error-message">Invalid email format.</div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input type="password" formControlName="password" [(ngModel)]="User.password" name="password" id="password" placeholder="Enter your password">
+          <div *ngIf="submitted && signupForm.controls['password'].errors?.['required']" class="error-message">Password is required.</div>
+        </div>
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input type="password" formControlName="confirmPassword"  [(ngModel)]="User.confirm" name="confirm"id="confirmPassword" placeholder="Confirm your password">
+          <div *ngIf="submitted && signupForm.controls['confirmPassword'].errors?.['required']" class="error-message">Confirm password is required.</div>
+          <div *ngIf="submitted && signupForm.controls['confirmPassword'].value !== signupForm.controls['password'].value" class="error-message">Passwords do not match.</div>
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender:</label>
+          <select formControlName="gender"  name="gender" id="gender" [(ngModel)]="User.gender">
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+          <div *ngIf="submitted && signupForm.controls['gender'].errors?.['required']" class="error-message">Gender is required.</div>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number:</label>
+          <input type="tel"  name="phone" formControlName="phone" id="phone" placeholder="Enter your phone number" [(ngModel)]="User.phone">
+          <div *ngIf="submitted && signupForm.controls['phone'].errors?.['required']" class="error-message">Phone number is required.</div>
+        </div>
+        <button type="submit" (click)="submitForm()" class="submit-button" type="reset">Sign up</button>
+        <p>Already have an account? <a routerLink="/login">Login</a></p>
+        <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+        <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+        
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,121 @@
+<!-- 
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+    <a class="navbar-brand px-4" href="#" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item dropdown" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)">
+          <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">Instructions</a></li>
+            <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+            <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/ins" routerLinkActive="active-link"  style="color:black;">Inspirations</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/acts"  routerLinkActive="active-link" style="color:black;"></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/stories"  routerLinkActive="active-link" style="color:black;">Stories</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/feedback"  routerLinkActive="active-link" style="color:black;">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="#"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-logo dropstart" style="color:black;">
+      <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+     data-bs-toggle="dropdown">USER</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a href="#" class="dropdown-item">SIGN UP</a></li>
+        <li><a href="login" class="dropdown-item">LOGIN</a></li>
+        <li><a href="#" class="dropdown-item">YOUR PROFILE</a></li>
+        <li><a href="#" class="dropdown-item">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+   -->
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Your Brand</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownServices"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            Services
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownServices">
+            <a class="dropdown-item" routerLink="/acts">Acts</a>
+            <a class="dropdown-item" routerLink="/stories">Stories</a>
+            <a class="dropdown-item" routerLink="/inspirations">Inspirations</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            href="#"
+            id="navbarDropdownUser"
+            role="button"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            User
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownUser">
+            <a class="dropdown-item" routerLink="/user-profile">User Profile</a>
+            <a class="dropdown-item" routerLink="/logout">Logout</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/feedback">Feedback</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  

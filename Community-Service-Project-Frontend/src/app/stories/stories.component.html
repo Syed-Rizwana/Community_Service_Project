@@ -1,0 +1,234 @@
+
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+    <a class="navbar-brand px-4" href="#" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <!-- <li class="nav-item dropdown" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)">
+          <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">Instructions</a></li>
+            <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+            <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+        </li>
+      
+        <li class="nav-item dropdown" (mouseover)="openDropdown($event,'stories')" (mouseleave)="closeDropdown($event,'stories')" routerLinkActive="active-link" role="button">
+          <a class="nav-link"  class="nav-link dropdown-toggle bg-pink" style="color:black;" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false"  routerLink="/stories"   style="color:black;">Stories</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen" >
+            <li><a routerLink="/share" class="dropdown-item">Share Your story</a></li>
+            <li><a routerLink="/update" class="dropdown-item">EDIT YOUR STORY</a></li>
+          
+            <li><a routerLink="/read" class="dropdown-item">Read Your Story</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link"  class="nav-link dropdown-toggle bg-pink" style="color:black;"  routerLink="/ins" routerLinkActive="active-link"  style="color:black;">Our Inspirations</a>
+          <!-- <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a routerLink="/Officers" class="dropdown-item">Women Officers</a></li>
+            <li><a routerLink="/Victims" class="dropdown-item">Women Victims</a></li>
+          </ul> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/feedback"  routerLinkActive="active-link" style="color:black;">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/contactus"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-logo dropstart" style="color:black;">
+      <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+  data-bs-toggle="dropdown">{{username}}</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a routerLink="/signup" class="dropdown-item">SIGN UP</a></li>
+        <li><a routerLink="/login" class="dropdown-item">LOGIN</a></li>
+        
+        <li><a routerLink="/display" class="dropdown-item">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+  
+      
+      
+<!-- <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+        aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://previews.123rf.com/images/make/make1702/make170200006/74257811-stop-violence-against-women.jpg">
+      </div>
+      <div class="carousel-item">
+        <img src="https://thumbs.dreamstime.com/b/stop-domestic-violence-against-women-girls-graphic-105831787.jpg">
+      </div>
+      <div class="carousel-item">
+        <img src="https://respectwomen.co.in/wp-content/uploads/2014/02/respect-women.jpg">
+      </div>
+      </div>
+    
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  
+  
+  <div class="story-container" [ngStyle]="{'display': currentIndex === 0 ? 'inline-flex' : 'none'}">
+    <img src="https://i.ytimg.com/vi/N6VDxRykyjk/maxresdefault.jpg" alt="Story 1" class="story-image">
+    <div class="story-text">
+      <h2>Story 1</h2>
+      <p>It was November 27, 2019. At 8.30 in the morning, 26-year-old Disha stopped her scooty near the Thondupalli toll plaza in Shamshabad and went to work. Disha returned at night and took her scooty to go home. The four who were waiting for her till then took her by force. An old policeman was taken aside and gang-raped. Later she took her life. She was taken in a lorry in the middle of the night and cremated under the Chatanpally bypass bridge in the suburbs of Shadnagar. This atrocity came to light in Tellari on December 28. Moved everyone. On the same night, the accused Arif, Jollu Siva, Jollu Naveen and Chennakesavulu were detained by the police.
+        The police brought the accused to the Shadnagar police station on November 29. Thousands of people staged a dharna in front of the police station to meet them. They said that if they hand over to them, they will kill them. A tense situation arose. Lathi charge was done. The tahsildar produced the accused on the same day. Remanded for 14 days, the police took the accused from Shadnagar to Charlapalli Jail amid heavy security. Later, the police asked for custody, and on December 3, the court granted 10 days of custody. Evidence was collected from the lorry used by the killers on December 5. In the early hours of December 6, the police took the four accused to Chatanpally Bridge for scene reconstruction. After that, in the encounter that took place there, all the four accused were shot dead by the police.
+        
+        The police said that the accused were taken to the place by Tellavar Jamune for the reconstruction of the scene as there was anger among the people. The police said that the accused snatched weapons from them and were about to shoot at them. Arif, Jollu Siva, Jollu Naveen and Chennakeshavu died on the spot in this encounter.
+  ...</p></div></div>
+  <div class="story-container" [ngStyle]="{'display': currentIndex === 1? 'inline-flex' : 'none'}">
+    <img src="https://dy365.in/admin/storyimage/5-2-2023-17-28-32-682.jpeg" alt="Story 2" class="story-image">
+    <div class="story-text">
+      <h2>Story 2</h2>
+      <p>A 16-year-old boy allegedly raped a 58-year-old woman and murdered her by gagging and hitting her brutally in Madhya Pradesh's Rewa district, a crime suspected to the fallout of a mobile phone theft two years ago, police said on Sunday.
+        The incident took place on the night of January 30 in Kailashpuri village under Hanumana police station limits.
+        
+        The boy allegedly stuffed a plastic bag and a cloth into her mouth, dragged her to an under-construction part of the building where she resided, hit on her head and other body parts with a sickle and also caused injuries to her private parts with a stick, an official said.
+        
+        The woman's family had accused the boy of stealing a mobile phone two years ago and the boy wanted to take revenge for it, he said.
+        
+        Additional Superintendent of Police (ASP) Vivek Lal said an information was received on February 1 that the body of a 58-year-old woman was lying at an under-construction building.
+        
+        The police and forensic team reached the spot and it was found the woman was brutally murdered by an unidentified person, he said.
+        
+        On the basis of tip-off from informers and the investigation, the police zeroed-in on the boy living in her neighbourhood.
+        
+        The woman's family members also expressed suspicion on the boy, who used to come their house to watch television two years back, the official said.
+        
+        Her family had then accused him of stealing a mobile phone which led to enmity between the boy and the family, the police said.
+        
+        The boy wanted to take revenge because of the embarrassment he faced in the village following the theft charge, the official said.
+  </p></div></div>
+  <div class="story-container" [ngStyle]="{'display': currentIndex === 2 ? 'inline-flex' : 'none'}">
+    <img src="https://vebaresourcecenter.com/wp-content/uploads/2022/09/VEBA_2022-09-22_Learn-the-Signs-of-Domestic-Abuse-and-Abusive-Relationships.jpg" alt="Story 3" class="story-image">
+    <div class="story-text">
+      <h2>Story 3</h2>
+      <p>A 28-year-old woman, resident of Hayatnagar, approached the police through WhatsApp and informed that she is suffering from domestic violence by husband and in-laws.
+        According to Rachakonda police commissioner Mahesh Bhagwat, 'She' team's Vanasthalipuram division in-charge Karunakar Reddy reached the victim's house.
+        She, however, was not willing to lodge the complaint and instead requested for counseling.
+        
+        The victim, her husband and in-laws were counseled at Sakhi Counselling Centre Vanasthalipuram through professional family counselors. Police said the husband and in-laws admitted their guilt and compromised.
+        The Rachakonda police commissioner appealed to all women suffering from domestic violence to dial 100 or Whatsapp control number 9490617111 for immediate help.
+        Bhagwat appealed to people to utilise the helpline for immediate advise, rescue and counseling in domestic violence cases.
+        He had earlier said that the domestic violence cases are not getting reported due to movement restrictions and lack of public transport.
+        Rachakonda is one of the three police commissionerates covering Hyderabad and its surroundings. Police officers said while routine crimes have declined, domestic violence witnessed spike during the lockdown.
+        Cyberabad police comissionerate registered more than 500 domestic violence related calls since the lockdown began last month. Police said they tried to solve a majority of the cases through tele-counselling.
+        The National Commission of Women (NCW) also said recently that domestic violence cases increased during the lockdown.
+  </p></div></div>
+  
+  <div class="button-container">
+    <button class="btn btn-secondary" id="previous-button" (click)="previousStory()">Previous</button>
+    <button class="btn btn-secondary" id="next-button" (click)="nextStory()">Next</button>
+  </div>
+  
+   
+   
+
+  
+ -->
+ <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+      aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://previews.123rf.com/images/make/make1702/make170200006/74257811-stop-violence-against-women.jpg">
+    </div>
+    <div class="carousel-item">
+      <img src="https://thumbs.dreamstime.com/b/stop-domestic-violence-against-women-girls-graphic-105831787.jpg">
+    </div>
+    <div class="carousel-item">
+      <img src="https://respectwomen.co.in/wp-content/uploads/2014/02/respect-women.jpg">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<div class="story-container" [ngStyle]="{'display': currentIndex === 0 ? 'inline-flex' : 'none'}">
+  <img src="https://i.ytimg.com/vi/N6VDxRykyjk/maxresdefault.jpg" alt="Story 1" class="story-image">
+  <div class="story-text">
+    <h2>Story 1</h2>
+    <p>It was November 27, 2019. At 8.30 in the morning, 26-year-old Disha stopped her scooty near the Thondupalli toll plaza in Shamshabad and went to work. Disha returned at night and took her scooty to go home. The four who were waiting for her till then took her by force. An old policeman was taken aside and gang-raped. Later she took her life. She was taken in a lorry in the middle of the night and cremated under the Chatanpally bypass bridge in the suburbs of Shadnagar. This atrocity came to light in Tellari on December 28. Moved everyone. On the same night, the accused Arif, Jollu Siva, Jollu Naveen and Chennakesavulu were detained by the police.
+      The police brought the accused to the Shadnagar police station on November 29. Thousands of people staged a dharna in front of the police station to meet them. They said that if they hand over to them, they will kill them. A tense situation arose. Lathi charge was done. The tahsildar produced the accused on the same day. Remanded for 14 days, the police took the accused from Shadnagar to Charlapalli Jail amid heavy security. Later, the police asked for custody, and on December 3, the court granted 10 days of custody. Evidence was collected from the lorry used by the killers on December 5. In the early hours of December 6, the police took the four accused to Chatanpally Bridge for scene reconstruction. After that, in the encounter that took place there, all the four accused were shot dead by the police.
+      
+      The police said that the accused were taken to the place by Tellavar Jamune for the reconstruction of the scene as there was anger among the people. The police said that the accused snatched weapons from them and were about to shoot at them. Arif, Jollu Siva, Jollu Naveen and Chennakeshavu died on the spot in this encounter.
+...</p></div></div>
+<div class="story-container" [ngStyle]="{'display': currentIndex === 1? 'inline-flex' : 'none'}">
+  <img src="https://dy365.in/admin/storyimage/5-2-2023-17-28-32-682.jpeg" alt="Story 2" class="story-image">
+  <div class="story-text">
+    <h2>Story 2</h2>
+    <p>A 16-year-old boy allegedly raped a 58-year-old woman and murdered her by gagging and hitting her brutally in Madhya Pradesh's Rewa district, a crime suspected to the fallout of a mobile phone theft two years ago, police said on Sunday.
+      The incident took place on the night of January 30 in Kailashpuri village under Hanumana police station limits.
+      
+      The boy allegedly stuffed a plastic bag and a cloth into her mouth, dragged her to an under-construction part of the building where she resided, hit on her head and other body parts with a sickle and also caused injuries to her private parts with a stick, an official said.
+      
+      The woman's family had accused the boy of stealing a mobile phone two years ago and the boy wanted to take revenge for it, he said.
+      
+      Additional Superintendent of Police (ASP) Vivek Lal said an information was received on February 1 that the body of a 58-year-old woman was lying at an under-construction building.
+      
+      The police and forensic team reached the spot and it was found the woman was brutally murdered by an unidentified person, he said.
+      
+      On the basis of tip-off from informers and the investigation, the police zeroed-in on the boy living in her neighbourhood.
+      
+      The woman's family members also expressed suspicion on the boy, who used to come their house to watch television two years back, the official said.
+      
+      Her family had then accused him of stealing a mobile phone which led to enmity between the boy and the family, the police said.
+      
+      The boy wanted to take revenge because of the embarrassment he faced in the village following the theft charge, the official said.
+</p></div></div>
+<div class="story-container" [ngStyle]="{'display': currentIndex === 2 ? 'inline-flex' : 'none'}">
+  <img src="https://vebaresourcecenter.com/wp-content/uploads/2022/09/VEBA_2022-09-22_Learn-the-Signs-of-Domestic-Abuse-and-Abusive-Relationships.jpg" alt="Story 3" class="story-image">
+  <div class="story-text">
+    <h2>Story 3</h2>
+    <p>A 28-year-old woman, resident of Hayatnagar, approached the police through WhatsApp and informed that she is suffering from domestic violence by husband and in-laws.
+      According to Rachakonda police commissioner Mahesh Bhagwat, 'She' team's Vanasthalipuram division in-charge Karunakar Reddy reached the victim's house.
+      She, however, was not willing to lodge the complaint and instead requested for counseling.
+      
+      The victim, her husband and in-laws were counseled at Sakhi Counselling Centre Vanasthalipuram through professional family counselors. Police said the husband and in-laws admitted their guilt and compromised.
+      The Rachakonda police commissioner appealed to all women suffering from domestic violence to dial 100 or Whatsapp control number 9490617111 for immediate help.
+      Bhagwat appealed to people to utilise the helpline for immediate advise, rescue and counseling in domestic violence cases.
+      He had earlier said that the domestic violence cases are not getting reported due to movement restrictions and lack of public transport.
+      Rachakonda is one of the three police commissionerates covering Hyderabad and its surroundings. Police officers said while routine crimes have declined, domestic violence witnessed spike during the lockdown.
+      Cyberabad police comissionerate registered more than 500 domestic violence related calls since the lockdown began last month. Police said they tried to solve a majority of the cases through tele-counselling.
+      The National Commission of Women (NCW) also said recently that domestic violence cases increased during the lockdown.
+</p></div></div>
+
+<div class="button-container">
+  <button class="btn btn-secondary" id="previous-button" (click)="previousStory()">Previous</button>
+  <button class="btn btn-secondary" id="next-button" (click)="nextStory()">Next</button>
+  </div>

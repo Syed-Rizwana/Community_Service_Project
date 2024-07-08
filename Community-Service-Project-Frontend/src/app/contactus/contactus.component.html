@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet"
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+	
+</head>
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+    <a class="navbar-brand px-4" href="#" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <!-- <li class="nav-item dropdown" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)">
+          <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">Instructions</a></li>
+            <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+            <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+        </li>
+      
+       
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/stories"  routerLinkActive="active-link" style="color:black;">Stories</a>
+        </li>
+		<li class="nav-item dropdown" (mouseover)="openDropdown($event, 'ins')" (mouseleave)="closeDropdown($event, 'ins')">
+			<a class="nav-link"  class="nav-link dropdown-toggle bg-pink" style="color:black;" role="button"
+			data-bs-toggle="dropdown" aria-expanded="false"  routerLink="/ins" routerLinkActive="active-link"  style="color:black;">Our Inspirations</a>
+			<ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+			  <li><a routerLink="/Officers" class="dropdown-item">Women Officers</a></li>
+			  <li><a routerLink="/Victims" class="dropdown-item">Women Victims</a></li>
+			</ul>
+		  </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/feedback"  routerLinkActive="active-link" style="color:black;">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="#"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-logo dropstart" style="color:black;">
+      <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+     data-bs-toggle="dropdown">{{username}}</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a routerLink="/signup" class="dropdown-item">SIGN UP</a></li>
+        <li><a routerLink="/login" class="dropdown-item">LOGIN</a></li>
+        <li><a href="#" class="dropdown-item">YOUR PROFILE</a></li>
+        <li><a routerLink="/display" class="dropdown-item">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+<body>
+	<section id="last">
+		<div class="full">
+			<h3>Contact Us:</h3>
+			<div class="lt">
+				<form class="form-horizontal">
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="text" class="form-control"
+								id="name" placeholder="NAME"
+								name="name" value="" [(ngModel)]="User.name"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-sm-12">
+							<input type="email" class="form-control"
+								id="email" placeholder="EMAIL"
+								name="email"
+								value="" [(ngModel)]="User.email"/>
+						</div>
+					</div>
+					<textarea class="form-control" rows="10"
+							placeholder="MESSAGE" name="message" [(ngModel)]="User.message">
+			</textarea>
+					<button class="btn btn-primary send-button"
+							id="submit" type="submit" (click)="Insert()" value="SEND">
+						<i class="fa fa-paper-plane"></i>
+						<span class="send-text">SEND</span>
+						<div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+          <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+					</button>
+				</form>
+			</div>
+			<div class="rt">
+				<ul class="contact-list">
+					<li class="list-item">
+						<i class="fa fa-map-marker fa-1x">
+							<span class="contact-text place" style="font-size: medium;" >
+								Narasaraopeta Engineering College
+							</span>
+						</i>
+					</li>
+					<li class="list-item">
+						<i class="fa fa-envelope fa-1x">
+							<span class="contact-text gmail">
+								<a href="mailto:yourmail@gmail.com"
+								title="Send me an email">
+									women@gmail.com</a>
+							</span>
+						</i>
+					</li>
+					<li class="list-item">
+						<i class="fa fa-phone fa-1x">
+							<span class="contact-text phone">
+								9876543210
+							</span>
+						</i>
+					</li>
+                    <h4>OurDetails:</h4>
+          <li>manvithaainavolu@gmail.com</li>
+          <li>keerthi075.b@gmail.com</li>
+          <li>varshibolla2507@gmail.com</li>
+          <li>K.Dhana Lakshmi</li>
+          <li>kjahnavisaipriya@gmail.com</li>
+          <li>K.Prathima</li>
+          <li>SK.Mubeena</li>
+          <li>syedrizwana69@gmail.com</li>
+          <li>vharshitha738@gmail.com</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,171 @@
+<body>
+  
+  
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+    <a class="navbar-brand px-4" href="#" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <!-- <li class="nav-item dropdown" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)">
+          <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">Instructions</a></li>
+            <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+            <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+        </li>
+     
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/stories"  routerLinkActive="active-link" style="color:black;">Stories</a>
+        </li>
+        <li class="nav-item dropdown" (mouseover)="openDropdown($event, 'ins')" (mouseleave)="closeDropdown($event, 'ins')">
+          <a class="nav-link"  class="nav-link dropdown-toggle bg-pink" style="color:black;" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false"  routerLink="/ins" routerLinkActive="active-link"  style="color:black;">Our Inspirations</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a routerLink="/Officers" class="dropdown-item">Women Officers</a></li>
+            <li><a routerLink="/Victims" class="dropdown-item">Women Victims</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/feedback"  routerLinkActive="active-link" style="color:black;">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="#"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-logo dropstart" style="color:black;">
+      <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+     data-bs-toggle="dropdown">{{username}}</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a routerLink="/signup" class="dropdown-item">SIGN UP</a></li>
+        <li><a routerLink="/login" class="dropdown-item">LOGIN</a></li>
+        <li><a href="#" class="dropdown-item">YOUR PROFILE</a></li>
+        <li><a routerLink="/display" class="dropdown-item">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+  <h2 style="color: whitesmoke;">What type of operation you need to perfom ?</h2>
+  <button class="i" (click)="inst()">Insert</button> 
+  <button class="d" (click)="delt()">Delete</button> 
+  <button class="u" (click)="updt()">Update</button>
+  <button class="r" (click)="retv()">Retrive</button> 
+  <br><br>
+    <form action="">  
+      <section>
+      <label>Section name</label><br>
+      <input #n="ngModel" type="text"  name="Section" placeholder="eg : Section 400" required [(ngModel)]="User.Section"> 
+      <!-- <span *ngIf="n.touched" >section required</span> -->
+      </section>
+      <section class="sect">
+      <label>Domain</label><br> 
+      <input type="text" name="Domain" placeholder="eg : Harassment" [disabled]="visi" [(ngModel)]="User.Domain"><br>
+      </section> <br>
+      <label>About</label><br>
+      <textarea cols="59" rows="5" name="about" placeholder="You can describe about it ...." [disabled]="visi" [(ngModel)]="User.About"></textarea><br>
+      <label>Reference link</label><br>
+      <input id="rlink" type="text" name="refr" placeholder="enter the link you have refered" [disabled]="visi" [(ngModel)]="User.Reference"><br>
+      <button type="submit"  type="reset"[class.hide]="ihide" class="i" (click)="Insert()">Submit</button>
+      <button type="submit" [class.hide]="bhide" class="d" (click)="Delete()">Delete</button>
+      <button type="submit" [class.hide]="uhide" class="u" (click)="Get()">Get</button>
+      <button type="submit" [class.hide]="uhide" class="u" (click)="Update()">Update</button>
+      <button type="submit" [class.hide]="rhide" class="r" (click)="Read()">Retrive</button> 
+    </form> <br><br> 
+  
+    
+  
+      <table align="center" *ngIf="tableMatch==1 && d.length>0"> 
+        <tr><th>Title</th><th>Details</th></tr>
+        <tr><td>Section Name</td><td>{{d[0][0]}}</td></tr>
+        <tr><td>Domain</td><td>{{d[0][1]}}</td></tr>
+        <tr><td>About</td><td>{{d[0][2]}}</td></tr>
+        <tr><td>Reference Link</td><td>{{d[0][3]}}</td></tr>
+      </table> 
+      <div class="emsgs msgs" *ngIf="tableMatch==1 && d.length==0" >Details not exist with this Section number</div>
+      <div class="smsgs msgs" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+    <div class="emsgs" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+    
+  </body>
+  <!-- <div class="container">
+    <div class="row">
+      <div class="col">
+        <table class="table table-bordered" *ngIf="tableMatch === 1 && d.length > 0">
+          <thead>
+            <tr>
+              <th>Section Name</th>
+              <th>Domain</th>
+              <th>About</th>
+              <th>Reference Link</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ d[0][0] }}</td>
+              <td>{{ d[0][1] }}</td>
+              <td>{{ d[0][2] }}</td>
+              <td>{{ d[0][3] }}</td>
+              <td>
+                <button class="btn btn-primary" (click)="editData(d[0])">Edit</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="container" *ngIf="uhide">
+    <h3>Edit Data</h3>
+    <form (ngSubmit)="Update()">
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label>Section Name</label>
+            <input type="text" class="form-control" [(ngModel)]="User.Section" name="Section" required>
+          </div>
+        </div>
+        <div class="col">
+          <div class="form-group">
+            <label>Domain</label>
+            <input type="text" class="form-control" [(ngModel)]="User.Domain" name="Domain">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label>About</label>
+            <textarea class="form-control" rows="4" [(ngModel)]="User.About" name="About" required></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <div class="form-group">
+            <label>Reference Link</label>
+            <input type="text" class="form-control" [(ngModel)]="User.Reference" name="Reference">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <button type="submit" class="btn btn-primary">Update</button>
+          <button type="button" class="btn btn-secondary" (click)="cancelUpdate()">Cancel</button>
+        </div>
+      </div>
+    </form>
+  </div>
+   -->

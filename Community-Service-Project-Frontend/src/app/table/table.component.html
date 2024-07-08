@@ -1,0 +1,34 @@
+<button (click)="ReadAll('All')">TABLE</button>
+<body>
+    <table align="center">  
+        <tr><th>Section Name</th><th>Domain</th><th>About</th><th>Reference Link</th><th>Update</th><th>Read</th></tr>
+        <tr *ngFor="let i of d">
+        <td>{{i[0]}}</td>  
+        <td>{{i[1]}}</td>  
+        <td>{{i[2]}}</td>  
+        <td>{{i[3]}}</td>   
+        <td><button type="button" id="u" (click)="Get(i)">Update</button></td>
+        
+        <td><button type="button" id="r" (click)="Read(i)">Read</button></td>
+        </tr>
+    </table> 
+</body>
+<div *ngIf="match" [class.hide]="status"> 
+    <i (click)="close()" class="fa fa-close"></i>
+    <p>Section Name : {{d1[0][0]}}</p>
+    <p>Domain : {{d1[0][1]}}</p>
+    <p>About : {{d1[0][2]}}</p>
+    <p>Reference Link : {{d1[0][3]}}</p>
+</div> 
+<div *ngIf="match1" [class.hide1]="status"> 
+    <i (click)="close()" class="fa fa-close"></i> 
+    <label for="sname">Section Name :</label> <br>
+    <input type="text" name="sname" [(ngModel)]="User.Section"> <br>  
+    <label for="domain">Domain :</label> <br>
+    <input type="text" name="domain" [(ngModel)]="User.Domain"><br>   
+    <label for="about">About :</label> <br>
+    <input type="text" name="about" [(ngModel)]="User.About"> <br>  
+    <label for="reference">Reference :</label> <br>
+    <input type="text" name="reference" [(ngModel)]="User.Reference">  <br>
+    <button type="button" (click)="Update()">Update</button>
+</div>

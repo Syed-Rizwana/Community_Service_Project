@@ -1,0 +1,102 @@
+<body>
+  <div class="opacity1" style="height: 2000px;">
+<div class="container">
+  <nav class="navbar navbar-expand-md navbar-dark bg-grey justify-content-center">
+    <h2 class="navbar-brand" style="color: rgb(246, 244, 244);font-size: 80px;">Narsaraopeta Engineering College</h2>
+  </nav>
+
+  <div class="row justify-content-center mt-5">
+    <div class="col-6 text-center">
+      <img src="assets/college_logo.jpg" style="width:300px;height:300px;" alt="" class="img-fluid">
+    </div>
+  </div>
+  <div class="row justify-content-center mt-5">
+    <div class="col-12 text-center">
+      <h3 style="color: rgb(245, 235, 235); font-weight: bold; font-size: 50px;">A COMMUNITY SERVICE PROJECT ON</h3>
+    </div>
+  </div>  <div class="row mt-5">
+    <div class="col-md-8 offset-md-2">
+      <div class="card">
+       
+        <div class="card-body">
+          <h3 class="card-title" style="color:rgb(27, 27, 28)">AWARENESS FOR WOMEN AGAINST ABUSE</h3>
+          <p class="card-text">To strive towards enabling women to achieve equality and equal participation in all spheres of life by securing her due rights and entitlements through suitable policy formulation, legislative measures, effective enforcement of laws, implementation of schemes/policies and devising strategies for solution of specific problems/situations arising out of discrimination and atrocities against women</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="row mt-5">
+    <div class="col-md-8 offset-md-2">
+      <div class="quotation-card" (click)="flipQuotationCard($event)">
+        <div class="quotation-card-inner">
+          <div class="quotation-card-front" style="background-color:rgb(101, 95, 101)">
+            <h4 class="quotation-card-title"style="color:white" >VIEW THIS</h4>
+          </div>
+          <div class="quotation-card-back">
+            <blockquote class="blockquote text-center">
+              <p class="mb-0" style="font-size: 20px;">"Overcoming abuse doesn't just happen, it takes positive steps every day. Let today be the day you start to move forward."</p>
+              <br/>
+              <footer class="blockquote-footer" style="font-size: 16px;">Sheryl Sandberg</footer>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+  <div class="row mt-5 justify-content-center">
+    <div class="col-md-12 col-lg-4 ">
+      <button type="button" class="btn btn-primary custom-button" style=" color: #fff; border: none; font-weight: bold;" (click)="toggleSignupForm()">Register to Visit Our Website</button>
+      
+    </div>
+    &nbsp;
+    &nbsp;
+    &nbsp;&nbsp;
+    &nbsp;
+    &nbsp;
+    <div class="col-md-12 col-lg-4 ">
+      <button type="button" class="btn btn-primary custom-button" style=" color: #fff; border: none; font-weight: bold;" (click)="Form()">Login</button>
+    </div>
+    
+ </div>
+</div>
+</body>
+
+<!-- <div id="signup-overlay" class="registration-overlay" [style.display]="isSignupFormVisible ? 'flex' : 'none'">
+  <div class="registration-form">
+    <button class="close-button" (click)="toggleSignupForm()">&times;</button>
+    <h2>Signup Form</h2>
+    <form [formGroup]="signupForm" (submit)="submitForm()" class="narrow-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter your name" required>
+        <div *ngIf="submitted && signupForm.controls['name'].errors?.['required']" class="text-danger">
+          Name is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" formControlName="email" id="email" placeholder="Enter your email" required>
+        <div *ngIf="submitted && signupForm.controls['email'].errors?.['required']" class="text-danger">
+          Email is required.
+        </div>
+        <div *ngIf="submitted && signupForm.controls['email'].errors?.['email']" class="text-danger">
+          Invalid email format.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="tel" class="form-control" formControlName="phone" id="phone" placeholder="Enter your phone number" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" formControlName="password" id="password" placeholder="Enter your password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div> -->
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

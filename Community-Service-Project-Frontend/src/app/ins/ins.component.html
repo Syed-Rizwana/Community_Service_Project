@@ -1,0 +1,168 @@
+
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+    <a class="navbar-brand px-4" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <!-- <li class="nav-item dropdown" (mouseover)="openDropdown($event,'complaint')" (mouseleave)="closeDropdown($event,'complaint')">
+          <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">Instructions</a></li>
+            <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+            <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/stories"  routerLinkActive="active-link" style="color:black;">Stories</a>
+        </li>
+        <li class="nav-item dropdown" (mouseover)="openDropdown($event, 'ins')" (mouseleave)="closeDropdown($event, 'ins')">
+          <a class="nav-link"  class="nav-link dropdown-toggle bg-pink" style="color:black;" role="button"
+          data-bs-toggle="dropdown" aria-expanded="false"  routerLink="/ins" routerLinkActive="active-link"  style="color:black;">Our Inspirations</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a routerLink="/Officers" class="dropdown-item">Women Officers</a></li>
+            <li><a routerLink="/Victims" class="dropdown-item">Women Victims</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/feedback"  routerLinkActive="active-link" style="color:black;">Feedback</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="#"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-logo dropstart" style="color:black;">
+      <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+     data-bs-toggle="dropdown">USER</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a routerLink="signup" class="dropdown-item">SIGN UP</a></li>
+        <li><a routerLink="/login" class="dropdown-item">LOGIN</a></li>
+        <li><a routerLink="/profile" class="dropdown-item">YOUR PROFILE</a></li>
+        <li><a routerLink="/display" class="dropdown-item">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container py-4">
+    <div class="card text-center bg-light mb-4">
+      <div class="card-body">
+        <h1 class="display-4" style="font-family:l;">Inspirations</h1>
+        <p class="lead">Empowering Women Against Abuse</p>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card mb-4">
+          <div class="card-body">
+            <h2 class="card-title">Our Inspiration</h2>
+            <p class="card-text" style="font-size:20px; font-weight:bold;">We draw inspiration from women officers and victims who have courageously fought for their rights, lives, and achieved success.</p>
+            <ul class="list-unstyled">
+              <li style="font-size:20px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">They have paved the way for change and empowerment.</li>
+              <li style="font-size:20px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">They have broken barriers and shattered stereotypes.</li>
+              <li style="font-size:20px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">They have stood up against abuse and injustice.</li>
+              <li style="font-size:20px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">They have shown resilience, determination, and strength.</li>
+              <li style="font-size:20px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">They have inspired others to speak up and take action.</li>
+            </ul>
+            <p class="card-text" style="font-size:20px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Their stories remind us that every voice matters and that we can make a difference.</p>
+          </div>
+        </div>
+  
+        <div class="card">
+          <div class="card-body">
+            <h2 class="card-title">Share Your Inspiration</h2>
+            <form class="form-group w-75 mx-auto">
+              <label class="form-label">Name</label>
+              <input type="text" name="name" class="form-control" [(ngModel)]="User.name">
+              <label class="form-label">Your Inspiration</label>
+              <input type="text" name="your_ins" class="form-control" [(ngModel)]="User.your_ins">
+              <button class="btn btn-primary mt-3" (click)="Insert()">Submit</button>
+              <button class="btn btn-danger mt-3" (click)="Delete()">Delete</button>
+              <button class="btn btn-success mt-3" (click)="Update()">Update</button>
+              <button class="btn btn-info mt-3" (click)="onReadClick()">Read</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+            <button class="btn-primary"class="toolbar-button" routerLink="/Officers" routerLinkActive="active">&#10132;</button>
+             
+              <a routerLink="/Inspirations" routerLinkActive="active"></a>
+              <div class="alert alert-success mt-3" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+              <div class="alert alert-success mt-3" *ngIf="!(updatedMsg =='')">{{updatedMsg}}</div>
+              <div class="alert alert-success mt-3" *ngIf="!(deletedMsg =='')">{{deletedMsg}}</div>
+            </form>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-6">
+        <div class="card bg-dark text-white mb-4">
+          <div class="card-body">
+            <h2 class="card-title">Inspiring Stories</h2>
+            <div class="row">
+              <div class="col-sm-6">
+                <img src="https://www.iforher.com/wp-content/uploads/2020/09/Domestic-Abuse-Victim-Survivor-Brave-Stories-300x157.jpg" alt="Inspiration 1" class="img-fluid rounded">
+              </div>
+              <div class="col-sm-6">
+                <img src="https://www.iforher.com/wp-content/uploads/2021/03/Single-mother-inspiring-story.jpg" alt="Inspiration 2" class="img-fluid rounded">
+              </div>
+              <div class="col-sm-6">
+                <img src="https://us.talktothepress.com/wp-content/uploads/2014/06/Bella_Story.jpg" alt="Inspiration 2" class="img-fluid rounded">
+              </div>
+              <div class="col-sm-6">
+                <img src="https://www.developmentdiaries.com/wp-content/uploads/2020/08/Girl-Rising-Photo-1.jpg" alt="Inspiration 2" class="img-fluid rounded">
+              </div>
+              <div class="col-sm-6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHp8T6csKENbeebF6dvjGIkfRR0AG9fclPf-1we5TYiEoFLhgHobZ2YqA1Kxm_1BVRluQ&usqp=CAU" alt="Inspiration 2" class="img-fluid rounded">
+              </div>
+              <div class="col-sm-6">
+                <img src="https://in.godaddy.com/blog/wp-content/uploads/priya-paul-park-hotels-min.jpeg" alt="Inspiration 2" class="img-fluid rounded">
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <div class="card" *ngIf="isReadClicked && readData.length > 0">
+          <div class="card-body">
+            <h2 class="card-title">Read Inspiration</h2>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Inspiration</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>{{readData[0][0]}}</td>
+                  <td>{{readData[0][1]}}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        
+        <div class="card" *ngIf="isReadClicked && readData.length === 0">
+          <div class="card-body">
+            <h2 class="card-title">No Inspiration Found</h2>
+            <p class="card-text">Sorry, no inspiration found with this name.</p>
+           
+          </div>
+          
+        </div>
+        
+      </div>
+   
+    </div>
+  </div>
+  
+ 
+  

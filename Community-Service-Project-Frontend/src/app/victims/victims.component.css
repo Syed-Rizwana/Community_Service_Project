@@ -1,0 +1,26 @@
+.head{
+    font-size:xx-large;
+    width: auto;
+    color:rgba(245, 5, 5, 0.947);
+}
+.ha{font: size 18px;;
+    font:  sans-serif;
+}
+.img{
+     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btnnn {
+           
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  .toolbar-button{
+   
+    font-size: x-large;
+  }

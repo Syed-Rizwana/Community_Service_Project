@@ -1,0 +1,79 @@
+table{
+    border-collapse: collapse;
+    text-align: center; 
+    color: black;
+}
+td,th{
+    border: 1px solid rgba(255, 255, 255, 0.61);
+    padding: 10px;
+} 
+th{
+    background-color: #4A55A2;
+    /* background-color:  transparent; */
+    color: #A0BFE0; 
+}
+tr:nth-child(odd){background-color: #7895CB}
+
+tr:hover {background-color: #C5DFF8;}  
+
+#u{
+    background-color: rgb(245, 106, 134);
+    padding: 6px; 
+    color: aliceblue;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+#r{
+    background-color: hotpink;
+    padding: 6px;  
+    width: 50px;
+    color: aliceblue;
+    border: none;
+    font-weight: bold; 
+    border-radius: 5px;
+}
+
+/* need styles */
+.hide{
+    display: inline-block; 
+    position: relative;
+    left: 400px;
+    bottom: 400px;
+    background-color: aliceblue; 
+    border: 2px solid black; 
+    padding: 40px; 
+    width: 500px;
+    height: 400px;
+} 
+i{
+    position: relative;
+    left: 400px;
+    bottom:20px;
+} 
+.hide1{
+    display: inline-block; 
+    position: relative;
+    left: 360px;
+    bottom: 400px;
+    background-color: aliceblue; 
+    border: 2px solid black; 
+    padding: 80px; 
+    width: 600px;
+    height: 500px;
+} 
+input{
+    height: 40px;
+    width: 400px;
+    margin: 10px;
+}
+div button{
+    position: relative;
+    top: 15px;
+    left: 150px; 
+    padding: 10px;
+    background-color: green;
+    color: aliceblue;
+    font-size: medium;
+    font-weight: bold;
+}

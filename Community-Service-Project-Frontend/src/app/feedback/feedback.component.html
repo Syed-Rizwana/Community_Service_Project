@@ -1,0 +1,130 @@
+
+<div class="navbar navbar-expand navbar-light bg-pink px-2 m-0">
+    
+    <a class="navbar-brand px-4" href="#" style="color:black;">AWARENESS FOR WOMEN AGAINST ABUSE</a>
+    <div class="navbar-collapse">
+      <ul class="navbar-nav me-auto">
+        <!-- <li class="nav-item dropdown" (mouseover)="openDropdown($event)" (mouseleave)="closeDropdown($event)">
+          <a class="nav-link dropdown-toggle bg-pink" style="color:black;" href="#" role="button"
+            data-bs-toggle="dropdown" aria-expanded="false">Register a Complaint</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">Instructions</a></li>
+            <li><a href="#" class="dropdown-item">Complaint Registration</a></li>
+            <li><a href="#" class="dropdown-item">Modify your Complaint</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" routerLinkActive="active-link" style="color:black;">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/abour" routerLinkActive="active-link" style="color:black;">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/acts"  routerLinkActive="active-link" style="color:black;">Acts and Rules</a>
+        </li>
+     
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/stories"  routerLinkActive="active-link" style="color:black;">Stories</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link"  class="nav-link dropdown-toggle bg-pink" style="color:black;" role="button" routerLink="/ins" routerLinkActive="active-link"  style="color:black;">Our Inspirations</a>
+          <!-- <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a routerLink="/Officers" class="dropdown-item">Women Officers</a></li>
+            <li><a routerLink="/Victims" class="dropdown-item">Women Victims</a></li>
+          </ul> -->
+        </li>
+        <li class="nav-item"  (mouseover)="openDropdown($event,'complaint')" (mouseleave)="closeDropdown($event,'complaint')">
+          <a class="nav-link"  routerLink="/feedback" role="button" data-bs-toggle="dropdown" aria-expanded="false" routerLinkActive="active-link" style="color:black;">Feedback</a>
+          <ul class="dropdown-menu dropdown-menu-light" [class.show]="isDropdownOpen">
+            <li><a href="#" class="dropdown-item">give your feedback</a></li>
+            <li><a href="#" class="dropdown-item">modify your feedback</a></li>
+            <li><a href="#" class="dropdown-item">Delete your feedback</a></li>
+            <li><a href="#" class="dropdown-item">Read Complaints</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"  routerLink="/contactus"  routerLinkActive="active-link" style="color:black;">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+    <div class="profile-logo dropstart" style="color:black;">
+      <button class="btn btn-outline-light dropdown-toggle" style="color:black;border-color:black;"
+     data-bs-toggle="dropdown">{{username}}</button>
+      <ul class="dropdown-menu dropdown-menu-dark">
+        <li><a routerLink="/signup" class="dropdown-item">SIGN UP</a></li>
+        <li><a routerLink="/login" class="dropdown-item">LOGIN</a></li>
+        <li><a href="#" class="dropdown-item">YOUR PROFILE</a></li>
+        <li><a routerLink="/display" class="dropdown-item">LOG OUT</a></li>
+      </ul>
+    </div>
+  </div>
+  <body>
+  <div class="container mt-5">
+    <div class="card p-4 text-white feedback">
+      <h1 class="text-center" style="color:white;font-size: 60px;">Feedback Form</h1>
+      <h4 class="text-center" style="color:white">If you have a suggestion or any feedback for us, we'd love to hear it</h4>
+      <div class="alert alert-success" *ngIf="msg">
+        {{ msg }}
+      </div>
+      <form [formGroup]="feedbackForm" (ngSubmit)="sendFeedback()" novalidate>
+        <div class="form-group" [ngClass]="{ 'has-error': submitted && feedbackForm.controls['name'].errors }">
+          <label for="name">Name</label>
+          <input type="text" [(ngModel)]="User.name" class="form-control" formControlName="name" placeholder="Write your name" required />
+          <div *ngIf="submitted && feedbackForm.controls['name'].errors" class="help-block">
+            <div *ngIf="feedbackForm.controls['name'].errors['required']" style="color:red">Name is required.</div>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': submitted && feedbackForm.controls['email'].errors }">
+          <label for="email">Email</label>
+          <input type="email"[(ngModel)]="User.email" class="form-control" formControlName="email" placeholder="Write your email" required />
+          <div *ngIf="submitted && feedbackForm.controls['email'].errors" class="help-block">
+            <div *ngIf="feedbackForm.controls['email'].errors['required']" style="color:red">Email is required.</div>
+            <div *ngIf="feedbackForm.controls['email'].errors['email']" style="color:red">Invalid email format.</div>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': submitted && feedbackForm.controls['category'].errors }">
+          <label for="category">Which service area do you have feedback for?</label>
+          <select class="form-control" name="category" formControlName="category" required>
+            <option *ngFor="let choice of category;" [value]="choice.id">{{ choice.value }}</option>
+          </select>
+          <div *ngIf="submitted && feedbackForm.controls['category'].errors" class="help-block">
+            <div *ngIf="feedbackForm.controls['category'].errors['required']" style="color:red">Category is required.</div>
+          </div>
+        </div>
+        <div class="form-group" [ngClass]="{ 'has-error': submitted && feedbackForm.controls['review'].errors }">
+          <label for="review">Review</label>
+          <textarea type="number"  [(ngModel)]="User.Review"  cols=30 rows="5" class="form-control" formControlName="review" placeholder="Write your review (round numbers)" required ></textarea>
+          <div *ngIf="submitted && feedbackForm.controls['review'].errors" class="help-block">
+            <div *ngIf="feedbackForm.controls['review'].errors['required']" style="color:red">Review is required.</div>
+            <div *ngIf="feedbackForm.controls['review'].errors['min']" style="color:red">Review must be a positive number.</div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Ratings</label>
+          <div class="ratings-container">
+            <span class="rating-btn" [class.selected]="User.Ratings === 1" (click)="setRating(1)">1</span>
+            <span class="rating-btn" [class.selected]="User.Ratings === 2" (click)="setRating(2)">2</span>
+            <span class="rating-btn" [class.selected]="User.Ratings === 3" (click)="setRating(3)">3</span>
+            <span class="rating-btn" [class.selected]="User.Ratings === 4" (click)="setRating(4)">4</span>
+            <span class="rating-btn" [class.selected]="User.Ratings === 5" (click)="setRating(5)">5</span>
+          </div>
+          <div class="selected-rating" *ngIf="ratings">
+            You selected: {{ ratings }} stars
+          </div>
+        </div>
+        <div class="form-group text-center">
+          <button class="btn btn-primary" type="submit" (click)="Insert()" [disabled]="submitted && feedbackForm.invalid">Submit Your Feedback</button>
+          <div class="alert alert-success my-2" *ngIf="!(SuccessMsg =='')">{{SuccessMsg}}</div>
+          <div class="alert alert-danger my-2" *ngIf="!(ErrorMsg =='')">{{ErrorMsg}}</div>
+          <!-- <input type="submit" value="delete" class="btn btn-danger my-3" type="reset" (click)="Delete()">&nbsp;
+          <div class="alert alert-success my-3" *ngIf="!(deletedMsg =='')">{{deletedMsg}}</div>
+          <input type="submit" value="update" class="btn btn-success my-3" (click)="Update()">
+          <div class="alert alert-success my-3" *ngIf="!(updatedMsg =='')">{{updatedMsg}}</div>&nbsp; -->
+          <input type="reset" value="reset" class="btn btn-success my-3">
+        </div>
+      </form>
+    </div>
+  </div>
+  </body>
+  

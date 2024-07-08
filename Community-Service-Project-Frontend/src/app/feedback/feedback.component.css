@@ -1,0 +1,136 @@
+/* styles.css (or your custom CSS file) */
+.feedback {
+  background-image: url('https://th.bing.com/th?q=Providing+Feedback+in+the+Workplace&w=120&h=120&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: block;
+  justify-content: center;
+
+  align-items: center;
+}
+.navbar {
+    background-color: #979090;
+  }
+  
+  .navbar .navbar-brand {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar .navbar-nav .nav-link {
+    color: #333;
+  }
+  
+  .navbar .navbar-nav .nav-link:hover,
+  .navbar .navbar-nav .nav-link:focus {
+    color: #555;
+  }
+  /* styles.css */
+
+.nav-link {
+    padding: 35 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(216, 142, 142, 0.2);
+    border-radius: 3rem;
+  }
+  
+  .active-link {
+   
+    text-decoration: underline;
+  }
+  
+  /* styles.css */
+
+.navbar {
+    background-color: #979090;
+  }
+  
+  .navbar-brand {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #d2c4c4;
+    color: #333;
+  }
+  
+  .navbar-nav .nav-item.dropdown .dropdown-menu {
+    background-color: #f8f9fa;
+  }
+  
+  .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .navbar-nav .active .nav-link {
+    text-decoration: underline;
+  }
+  .has-error .form-control {
+    border-color: red;
+  }
+  
+  .has-error .help-block {
+    color: red;
+  }
+  
+  .help-block {
+    margin-top: 5px;
+  }
+  
+  .btn-primary {
+    background-color: rgb(115, 214, 49);
+    color: white;
+  }
+  
+  .ratings-container {
+    display: flex;
+  }
+  
+  .rating-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    margin-right: 5px;
+    cursor: pointer;
+    color:black
+  }
+  .text-white {
+    color: black;
+  }
+  
+  
+  .selected {
+    background-color: #ccc;
+  }
+  
+  .rating-btn:hover {
+    background-color: #979090;
+  }
+  
+  .selected-rating {
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  

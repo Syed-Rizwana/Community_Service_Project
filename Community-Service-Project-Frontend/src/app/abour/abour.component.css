@@ -1,0 +1,309 @@
+/* styles.css (or your custom CSS file) */
+
+.navbar {
+    background-color: #979090;
+  }
+  
+  .navbar .navbar-brand {
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .navbar .navbar-nav .nav-link {
+    color: #333;
+  }
+  
+  .navbar .navbar-nav .nav-link:hover,
+  .navbar .navbar-nav .nav-link:focus {
+    color: #555;
+  }
+  /* styles.css */
+
+.nav-link {
+    padding: 35 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-link:hover {
+    background-color: rgba(216, 142, 142, 0.2);
+    border-radius: 3rem;
+  }
+  
+  .active-link {
+   
+    text-decoration: underline;
+  }
+  
+  /* styles.css */
+
+.navbar {
+    background-color: #979090;
+  }
+  
+  .navbar-brand {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-nav .nav-link {
+    color: white;
+    padding: 8px 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    background-color: #d2c4c4;
+    color: #333;
+  }
+  
+  .navbar-nav .nav-item.dropdown .dropdown-menu {
+    background-color: #f8f9fa;
+  }
+  
+  .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item {
+    color: #333;
+    transition: background-color 0.3s ease;
+  }
+  
+  .navbar-nav .nav-item.dropdown .dropdown-menu .dropdown-item:hover {
+    background-color: #eee;
+    color: #333;
+  }
+  
+  .navbar-nav .active .nav-link {
+    text-decoration: underline;
+  }
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f7f7f7;
+      }
+      
+      .navbar {
+        background-color: #7d6f7a;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+      }
+      
+      .navbar-brand {
+        color: black;
+        font-size: 24px;
+        font-weight: bold;
+        text-decoration: none;
+      }
+      
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .nav-item {
+        margin-left: 10px;
+      }
+      
+      .nav-link {
+        color: black;
+        text-decoration: none;
+      }
+      
+      .nav-link:hover {
+        text-decoration: underline;
+      }
+      
+      .profile-logo {
+        margin-left: auto;
+      }
+      
+      .dropdown-menu {
+        background-color: #343a40;
+        color: white;
+      }
+      
+      /* Apply additional styles as needed */
+      
+      header {
+        text-align: center;
+      }
+      
+      section {
+        margin-bottom: 20px;
+      }
+      
+      h1, h2 {
+        color: #333;
+      }
+      
+      p {
+        color: #555;
+      }
+      
+      ul {
+        list-style-type: none;
+        margin-left: 20px;
+      }
+      
+      footer {
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+  .survey-images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 10px;
+  }
+  
+  .gallery-item {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .gallery-item img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .gallery-item:hover img {
+    transform: scale(1.1);
+  }
+  
+  /* Optional: Add animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .gallery-item:nth-child(odd) {
+    animation: fadeIn 0.5s forwards;
+    opacity: 0;
+  }
+  
+  .gallery-item:nth-child(even) {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .team-member {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-nav router-link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .email {
+    margin-top: 10px;
+  }
+  section {
+    background-color: #f7f7f7;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    color: #333;
+  }
+  
+  p {
+    color: #555;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-left: 20px;
+  }
+  .gallery-item:nth-child(odd) {
+    animation: fadeIn 0.5s forwards;
+    opacity: 0;
+  }
+  
+  .gallery-item:nth-child(even) {
+    animation: fadeIn 0.5s forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+  }
+  .team-members {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .team-member {
+    background-color: white;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .footer-nav a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .email {
+    margin-top: 10px;
+  }
+      
